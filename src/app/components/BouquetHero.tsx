@@ -257,7 +257,7 @@ export function BouquetHero({ className = '' }: Props) {
   return (
     <div
       ref={mountRef}
-      className={`${className} [filter:blur(0.5px)] md:[filter:blur(1.4px)]`}
+      className={`${className} [filter:blur(1px)_brightness(1.15)] md:[filter:blur(1.2px)_brightness(1.18)]`}
       style={{ touchAction: 'none', pointerEvents: 'none', position: 'relative',
       maskImage: 'radial-gradient(ellipse 80% 75% at 55% 60%, black 45%, transparent 85%)',
       WebkitMaskImage: 'radial-gradient(ellipse 80% 75% at 55% 60%, black 45%, transparent 85%)' }}
