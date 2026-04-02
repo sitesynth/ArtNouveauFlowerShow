@@ -73,7 +73,7 @@ export function BouquetHero({ className = '' }: Props) {
 
     // ── Renderer ──────────────────────────────────────────────────────
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, logarithmicDepthBuffer: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 1));
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     renderer.setSize(W, H);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -257,8 +257,10 @@ export function BouquetHero({ className = '' }: Props) {
   return (
     <div
       ref={mountRef}
-      className={className}
-      style={{ touchAction: 'none', pointerEvents: 'none', position: 'relative', filter: 'blur(2.5px)' }}
+      className={`${className} [filter:blur(0.5px)] md:[filter:blur(1.4px)]`}
+      style={{ touchAction: 'none', pointerEvents: 'none', position: 'relative',
+      maskImage: 'radial-gradient(ellipse 80% 75% at 55% 60%, black 45%, transparent 85%)',
+      WebkitMaskImage: 'radial-gradient(ellipse 80% 75% at 55% 60%, black 45%, transparent 85%)' }}
     >
     </div>
   );
