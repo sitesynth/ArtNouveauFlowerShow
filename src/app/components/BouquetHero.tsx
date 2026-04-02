@@ -77,7 +77,7 @@ export function BouquetHero({ className = '' }: Props) {
     renderer.setSize(W, H);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    renderer.toneMappingExposure = 1.1;
+    renderer.toneMappingExposure = 0.6;
     // promote canvas to its own GPU layer — eliminates scroll-repaint flicker
     renderer.domElement.style.transform = 'translateZ(0)';
     el.appendChild(renderer.domElement);
@@ -126,9 +126,9 @@ export function BouquetHero({ className = '' }: Props) {
 
     function makeScene() {
       const scene = new THREE.Scene();
-      // Strong top light — main source straight above
+      // Main light — shifted right and forward, away from text zone
       const top = new THREE.DirectionalLight(new THREE.Color('#fff6e0'), 3.0);
-      top.position.set(0.0, 8.0, 1.0); scene.add(top);
+      top.position.set(3.5, 6.0, 3.0); scene.add(top);
       // Soft front fill — stops underside from going pure black
       const fill = new THREE.DirectionalLight(new THREE.Color('#d4c890'), 0.5);
       fill.position.set(0.0, 1.0, 4.0); scene.add(fill);
@@ -262,6 +262,15 @@ export function BouquetHero({ className = '' }: Props) {
       maskImage: 'radial-gradient(ellipse 80% 75% at 55% 60%, black 45%, transparent 85%)',
       WebkitMaskImage: 'radial-gradient(ellipse 80% 75% at 55% 60%, black 45%, transparent 85%)' }}
     >
+      {/* Vignette — darkens edges so model outline dissolves into bg */}
+      <div
+        className="absolute inset-0 pointer-events-none"
+        style={{
+          background: [
+            'radial-gradient(ellipse 70% 65% at 55% 60%, transparent 30%, rgba(14,10,4,0.55) 75%, rgba(14,10,4,0.85) 100%)',
+          ].join(', '),
+        }}
+      />
     </div>
   );
 }

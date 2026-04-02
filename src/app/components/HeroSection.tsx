@@ -177,8 +177,8 @@ export function HeroSection() {
           <motion.p
             variants={fadeUp} custom={2.0}
             initial="hidden" animate="visible"
-            style={{ fontFamily: DISPLAY_FONT }}
-            className="text-[#d4c68c]/90 text-base md:text-xl tracking-[0.42em] uppercase font-light pr-[0.42em]"
+            style={{ fontFamily: DISPLAY_FONT, textShadow: '0 2px 12px rgba(8,5,2,1), 0 4px 32px rgba(8,5,2,1), 0 0 60px rgba(8,5,2,0.95)' }}
+            className="text-[#d4c68c] text-base md:text-xl tracking-[0.42em] uppercase font-light pr-[0.42em]"
           >
             Atelier Floral · Bornem
           </motion.p>
@@ -187,8 +187,8 @@ export function HeroSection() {
           <motion.p
             variants={fadeUp} custom={2.2}
             initial="hidden" animate="visible"
-            style={{ fontFamily: DISPLAY_FONT }}
-            className="text-[#d4c68c]/75 text-sm md:text-base tracking-[0.18em] mt-2.5 max-w-sm"
+            style={{ fontFamily: DISPLAY_FONT, textShadow: '0 2px 12px rgba(8,5,2,1), 0 4px 32px rgba(8,5,2,1), 0 0 60px rgba(8,5,2,0.95)' }}
+            className="text-[#d4c68c]/90 text-sm md:text-base tracking-[0.18em] mt-2.5 max-w-sm"
           >
             Where nature becomes language
           </motion.p>
