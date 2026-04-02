@@ -115,10 +115,10 @@ export function HeroSection() {
         transition={{ duration: 2.2, delay: 1.2 }}
         className="absolute inset-0 z-[12] pointer-events-none"
       >
-        <HeroCorner className="absolute top-5 left-5  w-[72px] h-[72px] md:w-[100px] md:h-[100px]" />
-        <HeroCorner className="absolute top-5 right-5 w-[72px] h-[72px] md:w-[100px] md:h-[100px]" flipX />
-        <HeroCorner className="absolute bottom-5 left-5  w-[72px] h-[72px] md:w-[100px] md:h-[100px]" flipY />
-        <HeroCorner className="absolute bottom-5 right-5 w-[72px] h-[72px] md:w-[100px] md:h-[100px]" flipX flipY />
+        <HeroCorner className="absolute top-[68px] left-3 md:top-5 md:left-5  w-[56px] h-[56px] md:w-[100px] md:h-[100px]" />
+        <HeroCorner className="absolute top-[68px] right-3 md:top-5 md:right-5 w-[56px] h-[56px] md:w-[100px] md:h-[100px]" flipX />
+        <HeroCorner className="absolute bottom-5 left-3  md:left-5  w-[56px] h-[56px] md:w-[100px] md:h-[100px]" flipY />
+        <HeroCorner className="absolute bottom-5 right-3 md:right-5 w-[56px] h-[56px] md:w-[100px] md:h-[100px]" flipX flipY />
       </motion.div>
 
       {/* ── Main text content — left side on desktop, centred on mobile ── */}
@@ -135,7 +135,7 @@ export function HeroSection() {
             transition={{ duration: 1.4, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
             className="mb-6"
           >
-            <Logo size={64} color="#8a7b34" />
+            <Logo size={110} color="#8a7b34" />
           </motion.div>
 
           {/* Top rule */}
@@ -154,7 +154,7 @@ export function HeroSection() {
             className="text-[#d4c68c] whitespace-nowrap"
             style={{
               fontFamily: ZASLIA_FONT,
-              fontSize: 'clamp(42px, 8.5vw, 140px)',
+              fontSize: 'clamp(26px, 8.5vw, 140px)',
               fontWeight: 'normal',
               lineHeight: 1,
               letterSpacing: 'normal',

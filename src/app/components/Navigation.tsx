@@ -153,27 +153,34 @@ export function Navigation() {
           </button>
         </div>
 
-        {/* Mobile menu */}
-        <motion.div
-          initial={false}
-          animate={{ opacity: menuOpen ? 1 : 0, y: menuOpen ? 0 : -10 }}
-          transition={{ duration: 0.4 }}
-          className={`absolute top-full left-0 right-0 bg-[#1b160a]/96 backdrop-blur-xl border-b border-[#d4c68c]/10 flex flex-col items-center gap-9 py-12 md:hidden ${
-            menuOpen ? 'pointer-events-auto' : 'pointer-events-none'
-          }`}
-        >
-          {navLinks.map((item) => (
-            <a
-              key={item.label}
-              href={item.href}
-              onClick={() => setMenuOpen(false)}
-              style={{ fontFamily: DISPLAY_FONT }}
-              className="text-[#d4c68c]/70 text-xl tracking-[0.3em] uppercase font-light hover:text-[#d4c68c] transition-colors"
+        {/* Mobile menu — full slide down */}
+        <AnimatePresence>
+          {menuOpen && (
+            <motion.div
+              key="mobile-menu"
+              initial={{ opacity: 0, y: '-100%' }}
+              animate={{ opacity: 1, y: '0%' }}
+              exit={{ opacity: 0, y: '-100%' }}
+              transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+              className="absolute top-full left-0 right-0 bg-[#1b160a]/97 backdrop-blur-xl border-b border-[#d4c68c]/10 flex flex-col items-center gap-9 py-14 md:hidden pointer-events-auto"
             >
-              {item.label}
-            </a>
-          ))}
-        </motion.div>
+              {navLinks.map((item, i) => (
+                <motion.a
+                  key={item.label}
+                  href={item.href}
+                  onClick={() => setMenuOpen(false)}
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.4, delay: 0.05 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
+                  style={{ fontFamily: DISPLAY_FONT }}
+                  className="text-[#d4c68c]/70 text-2xl tracking-[0.3em] uppercase font-light hover:text-[#d4c68c] transition-colors"
+                >
+                  {item.label}
+                </motion.a>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.nav>
   );
