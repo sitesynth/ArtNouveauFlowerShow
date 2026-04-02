@@ -4,4 +4,4 @@ dist/
 *.local
 .env
 .env.*
-public/models/*.glb
+# models now tracked via Git LFS, not ignored
