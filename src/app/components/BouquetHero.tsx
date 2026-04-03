@@ -120,8 +120,9 @@ export function BouquetHero({ className = '' }: Props) {
     blendScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), blendMat));
 
     // ── Two model scenes (A and B) ────────────────────────────────────
+    const isMobile = W < 768;
     const camera = new THREE.PerspectiveCamera(40, W / H, 0.5, 40);
-    camera.position.set(0, 1.1, 3.45);
+    camera.position.set(0, 1.1, isMobile ? 4.1 : 3.45);
     camera.lookAt(0, 0.5, 0);
 
     function makeScene() {
@@ -179,6 +180,7 @@ export function BouquetHero({ className = '' }: Props) {
       rtA.setSize(w, h);
       rtB.setSize(w, h);
       camera.aspect = w / h;
+      camera.position.z = w < 768 ? 4.1 : 3.45;
       camera.updateProjectionMatrix();
     };
     window.addEventListener('resize', onResize);
