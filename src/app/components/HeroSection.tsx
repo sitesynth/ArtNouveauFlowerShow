@@ -86,6 +86,33 @@ export function HeroSection() {
         <BouquetHero className="w-full h-full" />
       </motion.div>
 
+      {/* ── Lens effect: edge blur + darken ── */}
+      {/* Subtle base blur across everything */}
+      <div
+        className="absolute inset-0 z-[11] pointer-events-none"
+        style={{
+          backdropFilter: 'blur(1px)',
+          WebkitBackdropFilter: 'blur(1px)',
+        }}
+      />
+      {/* Stronger blur only at edges */}
+      <div
+        className="absolute inset-0 z-[11] pointer-events-none"
+        style={{
+          backdropFilter: 'blur(14px)',
+          WebkitBackdropFilter: 'blur(14px)',
+          maskImage: 'radial-gradient(ellipse 65% 70% at 50% 50%, transparent 40%, black 80%)',
+          WebkitMaskImage: 'radial-gradient(ellipse 65% 70% at 50% 50%, transparent 40%, black 80%)',
+        }}
+      />
+      {/* Dark vignette at edges */}
+      <div
+        className="absolute inset-0 z-[11] pointer-events-none"
+        style={{
+          background: 'radial-gradient(ellipse 65% 70% at 50% 50%, transparent 40%, rgba(10,7,3,0.55) 85%, rgba(10,7,3,0.75) 100%)',
+        }}
+      />
+
       {/* ── Gradient shield — protects left-side text readability ── */}
       <div
         className="absolute inset-0 z-[11] pointer-events-none"
@@ -209,7 +236,7 @@ export function HeroSection() {
             <a
               href="#collections"
               style={{ fontFamily: "'Inter', sans-serif" }}
-              className="group relative overflow-hidden border border-[#d4c68c]/20 text-[#d4c68c] text-[10px] tracking-[0.3em] uppercase font-light px-7 py-3.5 hover:border-[#d4c68c]/55 hover:bg-[#d4c68c]/5 transition-all duration-500"
+              className="group relative overflow-hidden bg-black/50 border border-[#d4c68c]/80 text-[#d4c68c] text-[10px] tracking-[0.3em] uppercase font-light px-7 py-3.5 hover:border-[#d4c68c]/100 hover:bg-black/70 transition-all duration-500"
             >
               Explorer
             </a>
