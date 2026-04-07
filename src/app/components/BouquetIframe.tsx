@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 
-const RENDERER_URL = (import.meta as any).env?.VITE_BOUQUET_URL ?? 'http://localhost:5174';
+const RENDERER_URL = (import.meta as any).env?.VITE_BOUQUET_URL ?? 'https://sitesynth.github.io/3dmodelsRenderer';
 
 export function BouquetIframe({ className = '' }: { className?: string }) {
   const iframeRef = useRef<HTMLIFrameElement>(null);
