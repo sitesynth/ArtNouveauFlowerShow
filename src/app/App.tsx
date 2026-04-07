@@ -12,8 +12,14 @@ import { ManifestoSection }   from './components/ManifestoSection';
 import { ServicesSection }    from './components/ServicesSection';
 import { EditorialSection }   from './components/EditorialSection';
 import { ContactSection }     from './components/ContactSection';
+import { RecordBouquetPage }  from './components/RecordBouquetPage';
+
+// Dev-only: open /?record=1 to export bouquet-mobile.webm
+const isRecordMode = new URLSearchParams(window.location.search).get('record') === '1';
 
 export default function App() {
+  if (isRecordMode) return <RecordBouquetPage />;
+
   return (
     <CartProvider>
       <div className="bg-[#1b160a] overflow-x-hidden" style={{ cursor: 'default' }}>

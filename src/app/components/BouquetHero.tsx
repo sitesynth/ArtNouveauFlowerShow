@@ -48,9 +48,9 @@ function easeInOut(t: number) {
   return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 }
 
-interface Props { className?: string }
+interface Props { className?: string; recording?: boolean }
 
-export function BouquetHero({ className = '' }: Props) {
+export function BouquetHero({ className = '', recording = false }: Props) {
   const mountRef   = useRef<HTMLDivElement>(null);
   const mouseRef   = useRef({ nx: 0, ny: 0 });
   const targetRef  = useRef({ x: 0, y: 0 });
@@ -156,15 +156,45 @@ export function BouquetHero({ className = '' }: Props) {
 
     let destroyed = false;
 
-    MODELS.forEach((url, i) => {
+    // In recording mode: load only first model into both scenes
+    const modelsToLoad = recording ? [MODELS[0], MODELS[0]] : MODELS;
+    modelsToLoad.forEach((url, i) => {
       loader.load(url, (gltf) => {
         if (destroyed) return;
         const model = gltf.scene;
         prepareModel(model);
         loaded[i] = model;
         if (scenes[i]) scenes[i].root.add(model);
+
+        // Start recording once first model is loaded (recording mode only)
+        if (recording && i === 0) startRecording();
       }, undefined, (err) => console.error('GLB error:', url, err));
     });
+
+    // ── MediaRecorder (recording mode only) ──────────────────────────
+    const RECORD_SEC = 12;
+    function startRecording() {
+      const stream = renderer.domElement.captureStream(30);
+      const mimeType = MediaRecorder.isTypeSupported('video/webm;codecs=vp9')
+        ? 'video/webm;codecs=vp9'
+        : 'video/webm';
+      const rec = new MediaRecorder(stream, { mimeType, videoBitsPerSecond: 8_000_000 });
+      const chunks: BlobPart[] = [];
+      rec.ondataavailable = (e) => { if (e.data.size > 0) chunks.push(e.data); };
+      rec.onstop = () => {
+        const blob = new Blob(chunks, { type: 'video/webm' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = 'bouquet-mobile.webm'; a.click();
+        URL.revokeObjectURL(url);
+        // Notify the page that recording is done
+        document.dispatchEvent(new CustomEvent('bouquet-record-done'));
+      };
+      rec.start();
+      setTimeout(() => rec.stop(), RECORD_SEC * 1000);
+      // Notify the page that recording started
+      document.dispatchEvent(new CustomEvent('bouquet-record-start'));
+    }
 
     // ── Transition state ──────────────────────────────────────────────
     // blend=0 → show A entirely; blend=1 → show B entirely; then we flip
@@ -208,14 +238,18 @@ export function BouquetHero({ className = '' }: Props) {
       last = now;
       t   += delta;
 
-      // Mouse rotation
-      targetRef.current.y = mouseRef.current.nx * 0.4;
-      targetRef.current.x = mouseRef.current.ny * 0.08;
-      const k = 0.045;
-      currentRef.current.y += (targetRef.current.y - currentRef.current.y) * k;
-      currentRef.current.x += (targetRef.current.x - currentRef.current.x) * k;
-      const rotY = currentRef.current.y + t * 0.04;
-      const rotX = currentRef.current.x;
+      // Mouse rotation (disabled in recording mode for clean auto-spin)
+      const rotY = recording
+        ? t * 0.04
+        : (() => {
+            targetRef.current.y = mouseRef.current.nx * 0.4;
+            targetRef.current.x = mouseRef.current.ny * 0.08;
+            const k = 0.045;
+            currentRef.current.y += (targetRef.current.y - currentRef.current.y) * k;
+            currentRef.current.x += (targetRef.current.x - currentRef.current.x) * k;
+            return currentRef.current.y + t * 0.04;
+          })();
+      const rotX = recording ? 0 : currentRef.current.x;
       scenes.forEach(({ root: r }) => { r.rotation.y = rotY; r.rotation.x = rotX; });
 
       // Timer / fade logic

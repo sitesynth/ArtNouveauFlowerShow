@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'motion/react';
-import { BouquetHero } from './BouquetHero';
+import { BouquetIframe } from './BouquetIframe';
 import { Logo } from './Logo';
 
 const DISPLAY_FONT = "'Cormorant Garamond', Georgia, serif";
@@ -83,7 +83,7 @@ export function HeroSection() {
         style={{ y: bouquetY }}
         className="absolute inset-0 z-10 pointer-events-none"
       >
-        <BouquetHero className="w-full h-full" />
+        <BouquetIframe className="w-full h-full" />
       </motion.div>
 
       {/* ── Lens effect: edge blur + darken ── */}
