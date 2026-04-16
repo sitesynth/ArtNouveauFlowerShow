@@ -6,12 +6,12 @@ const DISPLAY_FONT = "'Cormorant Garamond', Georgia, serif";
 const BODY_FONT = "'Inter', sans-serif";
 
 const FOOTER_LINKS = [
-  { label: 'Collections', href: '#collections' },
-  { label: 'Boutique',    href: '#boutique'    },
-  { label: 'Atelier',     href: '#atelier'     },
-  { label: 'Services',    href: '#services'    },
-  { label: 'Contact',     href: '#contact'     },
-  { label: 'Instagram',   href: '#'            },
+  { label: 'Collecties', href: '#collections' },
+  { label: 'Boetiek',    href: '#boutique'    },
+  { label: 'Atelier',    href: '#atelier'     },
+  { label: 'Diensten',   href: '#services'    },
+  { label: 'Contact',    href: '#contact'     },
+  { label: 'Instagram',  href: '#'            },
 ];
 
 export function ContactSection() {
@@ -54,7 +54,7 @@ export function ContactSection() {
             style={{ fontFamily: BODY_FONT }}
             className="text-[#8a7b34] text-[10px] tracking-[0.45em] uppercase mb-8"
           >
-            Begin Your Story
+            Begin Uw Verhaal
           </p>
 
           <h2
@@ -67,15 +67,15 @@ export function ContactSection() {
               letterSpacing: '0.03em',
             }}
           >
-            Let's create something<br />
-            <em className="text-[#8a7b34]">extraordinary.</em>
+            Laten we iets<br />
+            <em className="text-[#8a7b34]">buitengewoons creëren.</em>
           </h2>
 
           <p
             style={{ fontFamily: BODY_FONT }}
             className="text-[#d4c68c]/35 text-sm max-w-md mb-10 leading-relaxed"
           >
-            Tell us about your occasion, your vision, your instinct — we'll find the flowers that speak it into being.
+            Vertel ons over uw gelegenheid, uw visie, uw gevoel — wij vinden de bloemen die dat tot leven wekken.
           </p>
 
           {/* Contact details */}
@@ -110,7 +110,7 @@ export function ContactSection() {
                   onChange={(e) => setEmail(e.target.value)}
                   onFocus={() => setFocused(true)}
                   onBlur={() => setFocused(false)}
-                  placeholder="Your email address"
+                  placeholder="Uw e-mailadres"
                   className="w-full bg-transparent border border-[#d4c68c]/15 text-[#d4c68c] placeholder-[#d4c68c]/25 px-5 py-4 outline-none text-sm transition-all duration-400 focus:border-[#d4c68c]/40"
                   style={{ fontFamily: BODY_FONT }}
                   required
@@ -127,7 +127,7 @@ export function ContactSection() {
                 style={{ fontFamily: BODY_FONT }}
                 className="bg-[#8a7b34] text-[#1b160a] text-[10px] tracking-[0.3em] uppercase font-medium px-8 py-4 hover:bg-[#d4c68c] transition-colors duration-400 whitespace-nowrap"
               >
-                Send
+                Verzenden
               </button>
             </form>
           ) : (
@@ -142,7 +142,7 @@ export function ContactSection() {
                 style={{ fontFamily: DISPLAY_FONT }}
                 className="text-[#d4c68c]/60 text-lg italic"
               >
-                Thank you. We'll be in touch shortly.
+                Dank u. We nemen binnenkort contact met u op.
               </p>
               <div className="w-6 h-px bg-[#8a7b34]" />
             </motion.div>

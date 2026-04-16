@@ -207,7 +207,7 @@ export function HeroSection() {
             style={{ fontFamily: DISPLAY_FONT, textShadow: '0 2px 12px rgba(8,5,2,1), 0 4px 32px rgba(8,5,2,1), 0 0 60px rgba(8,5,2,0.95)' }}
             className="text-[#d4c68c] text-base md:text-xl tracking-[0.42em] uppercase font-light pr-[0.42em]"
           >
-            Atelier Floral · Bornem
+            Bloematelier · Bornem
           </motion.p>
 
           {/* Tagline */}
@@ -217,7 +217,7 @@ export function HeroSection() {
             style={{ fontFamily: DISPLAY_FONT, textShadow: '0 2px 12px rgba(8,5,2,1), 0 4px 32px rgba(8,5,2,1), 0 0 60px rgba(8,5,2,0.95)' }}
             className="text-[#d4c68c]/90 text-sm md:text-base tracking-[0.18em] mt-2.5 max-w-sm"
           >
-            Where nature becomes language
+            Waar natuur taal wordt
           </motion.p>
 
           {/* CTAs */}
@@ -231,14 +231,14 @@ export function HeroSection() {
               style={{ fontFamily: "'Inter', sans-serif" }}
               className="group relative overflow-hidden bg-[#8a7b34] text-[#181005] text-[10px] tracking-[0.3em] uppercase font-medium px-7 py-3.5 hover:bg-[#d9cb92] transition-all duration-500"
             >
-              Boutique
+              Boetiek
             </a>
             <a
               href="#collections"
               style={{ fontFamily: "'Inter', sans-serif" }}
               className="group relative overflow-hidden bg-black/50 border border-[#d4c68c]/80 text-[#d4c68c] text-[10px] tracking-[0.3em] uppercase font-light px-7 py-3.5 hover:border-[#d4c68c]/100 hover:bg-black/70 transition-all duration-500"
             >
-              Explorer
+              Ontdekken
             </a>
           </motion.div>
         </div>

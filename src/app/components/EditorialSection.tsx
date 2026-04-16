@@ -68,7 +68,7 @@ export function EditorialSection() {
             style={{ fontFamily: BODY_FONT }}
             className="text-[#8a7b34] text-[10px] tracking-[0.45em] uppercase mb-6"
           >
-            The Atelier
+            Het Atelier
           </p>
           <h2
             className="text-[#d4c68c] font-light mb-6"
@@ -80,14 +80,14 @@ export function EditorialSection() {
               letterSpacing: '0.03em',
             }}
           >
-            A WORLD<br />
-            <em className="text-[#d4c68c]/70">IN BLOOM.</em>
+            EEN WERELD<br />
+            <em className="text-[#d4c68c]/70">IN BLOEI.</em>
           </h2>
           <p
             style={{ fontFamily: BODY_FONT }}
             className="text-[#d4c68c]/58 text-sm leading-relaxed max-w-xs"
           >
-            Ceremony florals that dissolve the line between art and nature — designed to be felt before they are seen.
+            Ceremoniebloemen die de grens tussen kunst en natuur doen vervagen — ontworpen om gevoeld te worden vóór ze gezien worden.
           </p>
           <motion.div
             initial={{ scaleX: 0 }}
@@ -102,7 +102,7 @@ export function EditorialSection() {
               style={{ fontFamily: BODY_FONT }}
               className="text-[#8a7b34] text-[10px] tracking-[0.35em] uppercase hover:text-[#d4c68c] transition-colors duration-400"
             >
-              Begin Your Journey
+              Begin Uw Reis
             </a>
           </motion.div>
         </motion.div>
@@ -139,7 +139,7 @@ export function EditorialSection() {
               style={{ fontFamily: DISPLAY_FONT }}
               className="text-[#d4c68c]/50 text-base italic"
             >
-              "Flowers are the earth's way of laughing."
+              "Bloemen zijn de manier waarop de aarde lacht."
             </p>
           </div>
         </div>
@@ -156,7 +156,7 @@ export function EditorialSection() {
               style={{ fontFamily: BODY_FONT }}
               className="text-[#8a7b34] text-[10px] tracking-[0.45em] uppercase mb-8"
             >
-              Our Philosophy
+              Onze Filosofie
             </p>
             <h3
               className="text-[#d4c68c] font-light mb-7"
@@ -168,21 +168,21 @@ export function EditorialSection() {
                 letterSpacing: '0.03em',
               }}
             >
-              We believe beauty<br />
-              <em>is a practice,</em><br />
-              not an event.
+              We geloven dat schoonheid<br />
+              <em>een gewoonte is,</em><br />
+              geen gelegenheid.
             </h3>
             <p
               style={{ fontFamily: BODY_FONT }}
               className="text-[#d4c68c]/52 text-sm leading-relaxed mb-10 max-w-sm"
             >
-              At Sören Van Laer, we don't just arrange flowers. We curate living moments — organic, transient, and deeply intentional. Every bloom is chosen for what it says, not just how it looks.
+              Bij Sören Van Laer schikken we niet enkel bloemen. We creëren levende momenten — organisch, vergankelijk en diep doordacht. Elke bloem wordt gekozen voor wat ze zegt, niet alleen voor hoe ze eruitziet.
             </p>
             <div className="flex flex-col gap-4">
               {[
-                'Seasonal & locally sourced',
-                'Hand-delivered in Bornem & surroundings',
-                'Custom consultation included',
+                'Seizoensgebonden & lokaal geteeld',
+                'Met de hand geleverd in Bornem & omgeving',
+                'Persoonlijk consult inbegrepen',
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-4">
                   <div className="w-4 h-px bg-[#8a7b34]/50" />

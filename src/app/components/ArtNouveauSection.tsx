@@ -160,7 +160,7 @@ export function ArtNouveauSection() {
               style={{ fontFamily: BODY_FONT }}
               className="text-[#8a7b34] text-[9px] tracking-[0.55em] uppercase"
             >
-              Botanical Heritage
+              Botanisch Erfgoed
             </p>
             <div className="h-px flex-1 max-w-[80px] bg-[#8a7b34]/25" />
           </div>
@@ -174,8 +174,8 @@ export function ArtNouveauSection() {
             }}
             className="text-[#d4c68c]"
           >
-            The Art of the<br />
-            <em className="text-[#8a7b34]">Living Form</em>
+            De Kunst van de<br />
+            <em className="text-[#8a7b34]">Levende Vorm</em>
           </h2>
           <BotanicalDivider className="w-full max-w-[480px] mx-auto mt-8" />
         </motion.div>
@@ -272,7 +272,7 @@ export function ArtNouveauSection() {
                   style={{ fontFamily: DISPLAY_FONT }}
                   className="text-[#d4c68c]/75 text-[clamp(22px,2.8vw,34px)] font-light italic text-center leading-tight"
                 >
-                  Nature as<br />living art
+                  Natuur als<br />levende kunst
                 </p>
                 <p
                   style={{ fontFamily: BODY_FONT }}

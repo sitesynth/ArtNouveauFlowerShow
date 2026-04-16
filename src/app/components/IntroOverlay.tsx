@@ -47,7 +47,7 @@ export function IntroOverlay() {
               transition={{ duration: 0.9, delay: 0.8, ease: 'easeOut' }}
               className="text-[#d4c68c] text-xs tracking-[0.35em] uppercase font-light"
             >
-              Atelier Floral
+              Bloematelier
             </motion.p>
             <motion.div
               initial={{ scaleX: 0 }}

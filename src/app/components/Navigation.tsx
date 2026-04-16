@@ -19,11 +19,11 @@ export function Navigation() {
   }, []);
 
   const navLinks = [
-    { label: 'Collections', href: '#collections' },
-    { label: 'Boutique',    href: '#boutique'     },
-    { label: 'Atelier',     href: '#atelier'      },
-    { label: 'Services',    href: '#services'     },
-    { label: 'Contact',     href: '#contact'      },
+    { label: 'Collecties', href: '#collections' },
+    { label: 'Boetiek',    href: '#boutique'     },
+    { label: 'Atelier',    href: '#atelier'      },
+    { label: 'Diensten',   href: '#services'     },
+    { label: 'Contact',    href: '#contact'      },
   ];
 
   return (
@@ -70,11 +70,11 @@ export function Navigation() {
           <button
             onClick={openCart}
             className="relative flex items-center gap-2 border border-[#8a7b34]/30 text-[#8a7b34] px-4 py-2 hover:bg-[#8a7b34]/10 hover:border-[#8a7b34] transition-all duration-400"
-            aria-label="Ouvrir le panier"
+            aria-label="Winkelwagen openen"
           >
             <ShoppingBag size={14} strokeWidth={1.4} />
             <span style={{ fontFamily: BODY_FONT }} className="text-[10px] tracking-[0.2em] uppercase">
-              Panier
+              Winkelmand
             </span>
             <AnimatePresence>
               {itemCount > 0 && (
@@ -132,7 +132,7 @@ export function Navigation() {
           <button
             onClick={openCart}
             className="relative text-[#d4c68c]/60 hover:text-[#8a7b34] transition-colors duration-300"
-            aria-label="Panier"
+            aria-label="Winkelmand"
           >
             <ShoppingBag size={18} strokeWidth={1.3} />
             <AnimatePresence>

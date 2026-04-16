@@ -18,33 +18,33 @@ const SERVICES: Service[] = [
     id: 'atelier',
     number: '01',
     name: 'Atelier',
-    tagline: 'Bespoke Creations',
-    description: 'Custom compositions designed from first conversation to final bloom.',
-    detail: 'Each arrangement is a dialogue between your vision and our craft.',
+    tagline: 'Maatwerk Creaties',
+    description: 'Maatwerk composities, ontworpen van het eerste gesprek tot de laatste bloem.',
+    detail: 'Elke schikking is een dialoog tussen uw visie en ons vakmanschap.',
   },
   {
     id: 'ceremonies',
     number: '02',
     name: 'Ceremonies',
-    tagline: 'Weddings & Events',
-    description: "Transforming spaces into immersive floral environments for life's most significant moments.",
-    detail: 'We design the emotional atmosphere as much as the visual one.',
+    tagline: 'Huwelijken & Evenementen',
+    description: 'Ruimtes omtoveren tot meeslepende bloemrijke omgevingen voor de belangrijkste momenten in het leven.',
+    detail: 'We ontwerpen de emotionele sfeer evenzeer als de visuele.',
   },
   {
     id: 'abonnement',
     number: '03',
     name: 'Abonnement',
-    tagline: 'Weekly Subscriptions',
-    description: 'A living presence in your home or office — refreshed weekly with seasonal selections.',
-    detail: "Because beauty shouldn't be an occasion. It should be a habit.",
+    tagline: 'Wekelijkse Abonnementen',
+    description: 'Een levende aanwezigheid in uw huis of kantoor — wekelijks vernieuwd met seizoensaanbod.',
+    detail: 'Omdat schoonheid geen gelegenheid moet zijn. Het moet een gewoonte zijn.',
   },
   {
     id: 'installations',
     number: '04',
-    name: 'Installations',
-    tagline: 'Art & Architecture',
-    description: 'Large-scale floral art installations for galleries, hotels, and architectural spaces.',
-    detail: 'Where flowers become sculpture and space becomes story.',
+    name: 'Installaties',
+    tagline: 'Kunst & Architectuur',
+    description: 'Grootschalige bloemrijke kunstinstallaties voor galerijen, hotels en architecturale ruimtes.',
+    detail: 'Waar bloemen sculptuur worden en ruimte verhaal wordt.',
   },
 ];
 
@@ -154,7 +154,7 @@ export function ServicesSection() {
               style={{ fontFamily: BODY_FONT }}
               className="text-[#8a7b34] text-[10px] tracking-[0.45em] uppercase mb-4"
             >
-              Our Practice
+              Onze Praktijk
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 25 }}
@@ -167,8 +167,8 @@ export function ServicesSection() {
                 fontWeight: 300,
               }}
             >
-              Four ways<br />
-              <em>to work with us.</em>
+              Vier manieren<br />
+              <em>om met ons samen te werken.</em>
             </motion.h2>
           </div>
           <motion.p
@@ -178,7 +178,7 @@ export function ServicesSection() {
             style={{ fontFamily: BODY_FONT }}
             className="text-[#d4c68c]/38 text-sm leading-relaxed self-end max-w-md"
           >
-            Each engagement begins with a conversation. We listen to what you can't quite put into words — then find the flowers that speak it for you.
+            Elke samenwerking begint met een gesprek. We luisteren naar wat u nauwelijks in woorden kunt uitdrukken — en vinden dan de bloemen die dat voor u verwoorden.
           </motion.p>
         </div>
 

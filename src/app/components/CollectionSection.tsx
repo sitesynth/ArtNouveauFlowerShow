@@ -18,27 +18,27 @@ const COLLECTIONS: Collection[] = [
   {
     id: 'nuit',
     name: 'La Nuit',
-    subtitle: 'The Night Collection',
+    subtitle: 'De Nachtcollectie',
     tag: '01',
-    description: 'Dramatic compositions in deep burgundy, obsidian and midnight bloom.',
+    description: 'Dramatische composities in diep bordeauxrood, obsidiaan en middernachtsbloei.',
     image: 'https://images.unsplash.com/photo-1725784055171-1888e4d61980?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb29keSUyMHBlb255JTIwZmxvd2VyJTIwY2xvc2UlMjB1cCUyMGRhcmslMjBhdG1vc3BoZXJpY3xlbnwxfHx8fDE3NzUwMzQ1MjV8MA&ixlib=rb-4.1.0&q=80&w=1080',
     accent: '#3a2411',
   },
   {
     id: 'aube',
     name: "L'Aube",
-    subtitle: 'The Dawn Collection',
+    subtitle: 'De Dageraadicollectie',
     tag: '02',
-    description: 'Soft, luminous arrangements that capture the first light of morning.',
+    description: 'Zachte, lichtende schikkingen die het eerste ochtendlicht vangen.',
     image: 'https://images.unsplash.com/photo-1666865997281-8d4af466b5bd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBmbG9yYWwlMjBhcnJhbmdlbWVudCUyMGVkaXRvcmlhbCUyMGZhc2hpb24lMjBib3VxdWV0fGVufDF8fHx8MTc3NTAzNDUzMHww&ixlib=rb-4.1.0&q=80&w=1080',
     accent: '#8a7b34',
   },
   {
     id: 'jardin',
     name: 'Le Jardin Sauvage',
-    subtitle: 'The Wild Garden',
+    subtitle: 'De Wilde Tuin',
     tag: '03',
-    description: 'Untamed, organic beauty — flowers as they were meant to be.',
+    description: 'Ontembare, organische schoonheid — bloemen zoals ze bedoeld zijn.',
     image: 'https://images.unsplash.com/photo-1652540248126-371d37b428f5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzaW5nbGUlMjBvcmNoaWQlMjBkYXJrJTIwYmFja2dyb3VuZCUyMG1hY3JvJTIwZHJhbWF0aWMlMjBsaWdodHxlbnwxfHx8fDE3NzUwMzQ1MzF8MA&ixlib=rb-4.1.0&q=80&w=1080',
     accent: '#4a4921',
   },
@@ -196,7 +196,7 @@ function CollectionCard({ collection, index }: CardProps) {
                   className="text-[#8a7b34] text-[10px] tracking-[0.3em] uppercase"
                   style={{ fontFamily: BODY_FONT }}
                 >
-                  Explore
+                  Ontdekken
                 </span>
               </div>
             </motion.div>
@@ -245,7 +245,7 @@ export function CollectionSection() {
                 style={{ fontFamily: BODY_FONT }}
                 className="text-[#8a7b34] text-[10px] tracking-[0.4em] uppercase"
               >
-                The Collections
+                De Collecties
               </motion.p>
             </div>
 
@@ -261,7 +261,7 @@ export function CollectionSection() {
             >
               {/* Line 1 — "Three worlds," */}
               <span style={{ display: 'block' }}>
-                {'Three worlds,'.split(' ').map((word, i) => (
+                {'Drie werelden,'.split(' ').map((word, i) => (
                   <MaskReveal key={word} delay={0.15 + i * 0.1} style={{ marginRight: '0.25em' }}>
                     <span>{word}</span>
                   </MaskReveal>
@@ -270,7 +270,7 @@ export function CollectionSection() {
               {/* Line 2 — "one atelier." */}
               <span style={{ display: 'block' }}>
                 <em>
-                  {'one atelier.'.split(' ').map((word, i) => (
+                  {'één atelier.'.split(' ').map((word, i) => (
                     <MaskReveal key={word} delay={0.35 + i * 0.12} style={{ marginRight: '0.25em' }}>
                       <span>{word}</span>
                     </MaskReveal>

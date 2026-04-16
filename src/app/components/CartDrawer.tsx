@@ -63,13 +63,13 @@ export function CartDrawer() {
                   style={{ fontFamily: BODY_FONT }}
                   className="text-[#8a7b34] text-[9px] tracking-[0.5em] uppercase mb-1"
                 >
-                  Votre Sélection
+                  Uw Selectie
                 </p>
                 <h2
                   style={{ fontFamily: DISPLAY_FONT, fontSize: 'clamp(22px,2.5vw,28px)', fontWeight: 300, letterSpacing: '0.06em' }}
                   className="text-[#d4c68c]"
                 >
-                  Panier
+                  Winkelmand
                   {itemCount > 0 && (
                     <span className="text-[#8a7b34] ml-2 text-lg">({itemCount})</span>
                   )}
@@ -78,7 +78,7 @@ export function CartDrawer() {
               <button
                 onClick={closeCart}
                 className="w-9 h-9 border border-[#d4c68c]/12 flex items-center justify-center text-[#d4c68c]/40 hover:text-[#d4c68c] hover:border-[#d4c68c]/30 transition-all duration-300"
-                aria-label="Fermer"
+                aria-label="Sluiten"
               >
                 <X size={15} strokeWidth={1.2} />
               </button>
@@ -98,7 +98,7 @@ export function CartDrawer() {
                       style={{ fontFamily: DISPLAY_FONT }}
                       className="text-[#d4c68c]/25 text-lg italic"
                     >
-                      Votre panier est vide
+                      Uw winkelmand is leeg
                     </p>
                     <BotanicalRule className="w-32" />
                   </motion.div>
@@ -113,13 +113,13 @@ export function CartDrawer() {
                       style={{ fontFamily: DISPLAY_FONT }}
                       className="text-[#d4c68c]/70 text-xl italic text-center"
                     >
-                      Merci pour votre confiance.
+                      Bedankt voor uw vertrouwen.
                     </p>
                     <p
                       style={{ fontFamily: BODY_FONT }}
                       className="text-[#d4c68c]/30 text-xs tracking-[0.2em] text-center"
                     >
-                      Nous vous contacterons sous 24h.
+                      Wij nemen binnen 24 uur contact met u op.
                     </p>
                     <BotanicalRule className="w-32" />
                   </motion.div>
@@ -194,7 +194,7 @@ export function CartDrawer() {
                           <button
                             onClick={() => removeItem(item.id)}
                             className="text-[#d4c68c]/20 hover:text-[#d4c68c]/60 transition-colors duration-200"
-                            aria-label="Supprimer"
+                            aria-label="Verwijderen"
                           >
                             <Trash2 size={13} strokeWidth={1.2} />
                           </button>
@@ -217,7 +217,7 @@ export function CartDrawer() {
                     style={{ fontFamily: BODY_FONT }}
                     className="text-[#d4c68c]/40 text-[10px] tracking-[0.25em] uppercase"
                   >
-                    Sous-total
+                    Subtotaal
                   </span>
                   <span
                     style={{ fontFamily: DISPLAY_FONT, fontSize: '20px', fontWeight: 300 }}
@@ -231,7 +231,7 @@ export function CartDrawer() {
                   style={{ fontFamily: BODY_FONT }}
                   className="text-[#d4c68c]/22 text-[10px] tracking-[0.15em] mb-7"
                 >
-                  Livraison calculée à l'étape suivante · Bruxelles & environs
+                  Levering berekend in de volgende stap · Brussel & omgeving
                 </p>
 
                 {/* Order button */}
@@ -240,7 +240,7 @@ export function CartDrawer() {
                   style={{ fontFamily: BODY_FONT }}
                   className="w-full bg-[#8a7b34] text-[#1b160a] text-[10px] tracking-[0.4em] uppercase font-medium py-4 hover:bg-[#d4c68c] transition-colors duration-400"
                 >
-                  Commander
+                  Bestellen
                 </button>
 
                 <button
@@ -248,7 +248,7 @@ export function CartDrawer() {
                   style={{ fontFamily: BODY_FONT }}
                   className="w-full mt-3 text-[#d4c68c]/30 text-[10px] tracking-[0.3em] uppercase hover:text-[#d4c68c]/60 transition-colors duration-300 py-2"
                 >
-                  Continuer mes achats
+                  Verder winkelen
                 </button>
               </div>
             )}

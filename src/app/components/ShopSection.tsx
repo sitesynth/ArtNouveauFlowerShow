@@ -24,95 +24,95 @@ const PRODUCTS: Product[] = [
   {
     id: 'noir-sauvage',
     name: 'Noir Sauvage',
-    subtitle: 'Bouquet de Pivoines',
+    subtitle: 'Pioenenboeket',
     category: 'bouquets',
     price: 85,
-    unit: 'pièce',
-    description: 'Compositions en pivoine profonde, fumée et feuillage sombre. Cueillie le matin même.',
+    unit: 'stuk',
+    description: 'Composities in diepe, rokerige pioen en donker loof. Geplukt op de dag zelf.',
     tag: 'Signature',
     image: 'https://images.unsplash.com/photo-1623183073884-84163e7b857d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxsdXh1cnklMjBkYXJrJTIwcGVvbnklMjBib3VxdWV0JTIwZWRpdG9yaWFsJTIwYmxhY2slMjBiYWNrZ3JvdW5kfGVufDF8fHx8MTc3NTAzNTk4MXww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'carte-blanche',
     name: 'Carte Blanche',
-    subtitle: 'Roses Blanches',
+    subtitle: 'Witte Rozen',
     category: 'compositions',
     price: 120,
-    unit: 'pièce',
-    description: 'Roses blanches immaculées en arrangement monochrome, éditorial et intemporel.',
+    unit: 'stuk',
+    description: 'Onberispelijke witte rozen in een monochroom, editoriaal en tijdloos arrangement.',
     tag: 'Bestseller',
     image: 'https://images.unsplash.com/photo-1518281518837-b381e0511676?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aGl0ZSUyMHJvc2VzJTIwbWluaW1hbCUyMGRhcmslMjBkcmFtYXRpYyUyMGFycmFuZ2VtZW50fGVufDF8fHx8MTc3NTAzNTk4MXww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'brume-soir',
     name: 'Brume du Soir',
-    subtitle: 'Bouquet Sauvage',
+    subtitle: 'Wild Boeket',
     category: 'bouquets',
     price: 65,
-    unit: 'pièce',
-    description: 'Fleurs des champs récoltées à la main, composition organique et non-domestiquée.',
+    unit: 'stuk',
+    description: 'Met de hand geplukte veldbloemen, organische en ongetemde compositie.',
     image: 'https://images.unsplash.com/photo-1532348259011-8b1bd3018081?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3aWxkZmxvd2VyJTIwYm91cXVldCUyMGVkaXRvcmlhbCUyMG1vb2R5JTIwZGFya3xlbnwxfHx8fDE3NzUwMzU5ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'orchidee-noire',
     name: "L'Orchidée",
-    subtitle: 'Tige Longue',
+    subtitle: 'Lange Steel',
     category: 'tiges',
     price: 45,
-    unit: 'tige',
-    description: 'Orchidée en tige longue, moody et minimaliste — pour ceux qui savent.',
+    unit: 'steel',
+    description: 'Orchidee op lange steel, sfeervol en minimalistisch — voor hen die het weten.',
     image: 'https://images.unsplash.com/photo-1671640165735-7aedc79f6170?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXJrJTIwb3JjaGlkJTIwc2luZ2xlJTIwc3RlbSUyMGZpbmUlMjBhcnQlMjBwaG90b2dyYXBoeXxlbnwxfHx8fDE3NzUwMzU5ODJ8MA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'ranunculus-or',
     name: "Ranunculus d'Or",
-    subtitle: 'Composition Belle Époque',
+    subtitle: 'Belle Époque Compositie',
     category: 'compositions',
     price: 95,
-    unit: 'pièce',
-    description: 'Renoncules et anémones en mélange doré, évocateur des ateliers parisiens.',
-    tag: 'Nouveau',
+    unit: 'stuk',
+    description: 'Ranonkels en anemonen in een gouden mengeling, evokerend aan Parijse ateliers.',
+    tag: 'Nieuw',
     image: 'https://images.unsplash.com/photo-1742930236570-94a76a77b808?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmVtb25lJTIwcmFudW5jdWx1cyUyMGx1eHVyeSUyMGJvdXF1ZXQlMjBkYXJrJTIwc3R1ZGlvfGVufDF8fHx8MTc3NTAzNTk4M3ww&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'tulipes-nuit',
     name: 'Tulipes de Nuit',
-    subtitle: 'Botte de Saison',
+    subtitle: 'Seizoensbos',
     category: 'tiges',
     price: 48,
-    unit: 'botte',
-    description: 'Tulipes aux teintes profondes, récoltées avant l\'aube. Disponible en saison.',
+    unit: 'bos',
+    description: 'Tulpen in diepe tinten, geplukt voor het krieken van de dag. Seizoensgebonden beschikbaar.',
     image: 'https://images.unsplash.com/photo-1619986878303-1063f69c57a4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0dWxpcCUyMGRhcmslMjBtb29keSUyMGNsb3NlJTIwdXAlMjBlZGl0b3JpYWwlMjBmbG93ZXJ8ZW58MXx8fHwxNzc1MDM1OTgzfDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'abonnement-saison',
     name: 'Abonnement Saison',
-    subtitle: 'Livraison Hebdomadaire',
+    subtitle: 'Wekelijkse Levering',
     category: 'abonnements',
     price: 175,
-    unit: 'mois',
-    description: 'Une présence vivante dans votre espace — renouvelée chaque semaine selon la saison.',
-    tag: 'Populaire',
+    unit: 'maand',
+    description: 'Een levende aanwezigheid in uw ruimte — elke week vernieuwd met seizoensaanbod.',
+    tag: 'Populair',
     image: 'https://images.unsplash.com/photo-1675633273863-5a4c9341222d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkcmllZCUyMGZsb3dlciUyMHN1YnNjcmlwdGlvbiUyMGJveCUyMG1pbmltYWwlMjBsdXh1cnl8ZW58MXx8fHwxNzc1MDM1OTg0fDA&ixlib=rb-4.1.0&q=80&w=1080',
   },
   {
     id: 'rose-ecarlate',
     name: 'Rose Écarlate',
-    subtitle: 'Roses de Jardin',
+    subtitle: 'Tuinrozen',
     category: 'bouquets',
     price: 75,
-    unit: 'pièce',
-    description: 'Roses de jardin en teintes profondes. Composition dramatique, livrée à Bruxelles.',
+    unit: 'stuk',
+    description: 'Tuinrozen in diepe tinten. Dramatische compositie, geleverd in Brussel.',
     image: 'https://images.unsplash.com/photo-1470690096659-6f59b9b39fd1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnYXJkZW4lMjByb3NlJTIwZGVlcCUyMHJlZCUyMGRyYW1hdGljJTIwYmxhY2slMjBiYWNrZ3JvdW5kfGVufDF8fHx8MTc3NTAzNTk4NXww&ixlib=rb-4.1.0&q=80&w=1080',
   },
 ];
 
 const CATEGORIES = [
-  { id: 'all',         label: 'Tout' },
-  { id: 'bouquets',    label: 'Bouquets' },
-  { id: 'compositions',label: 'Compositions' },
-  { id: 'tiges',       label: 'Tiges' },
-  { id: 'abonnements', label: 'Abonnements' },
+  { id: 'all',         label: 'Alles' },
+  { id: 'bouquets',    label: 'Boeketten' },
+  { id: 'compositions',label: 'Composities' },
+  { id: 'tiges',       label: 'Stelen' },
+  { id: 'abonnements', label: 'Abonnementen' },
 ];
 
 /* ─── Art Nouveau tag ornament ─────────────────────────────────── */
@@ -224,7 +224,7 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
             style={{ fontFamily: BODY_FONT }}
           >
             <span className="text-[9px] tracking-[0.35em] uppercase font-medium">
-              {added ? 'Ajouté ✓' : 'Ajouter au panier'}
+              {added ? 'Toegevoegd ✓' : 'In winkelmand'}
             </span>
             <Plus size={13} strokeWidth={2} className="group-hover/btn:rotate-90 transition-transform duration-300" />
           </motion.button>
@@ -338,7 +338,7 @@ export function ShopSection() {
                 style={{ fontFamily: BODY_FONT }}
                 className="text-[#8a7b34] text-[9px] tracking-[0.55em] uppercase mb-4"
               >
-                La Boutique · Bruxelles
+                De Boetiek · Brussel
               </motion.p>
 
               <motion.h2
@@ -354,8 +354,8 @@ export function ShopSection() {
                 }}
                 className="text-[#d4c68c]"
               >
-                Commander<br />
-                <em className="text-[#8a7b34]">en ligne.</em>
+                Bestellen<br />
+                <em className="text-[#8a7b34]">online.</em>
               </motion.h2>
             </div>
 
@@ -366,14 +366,14 @@ export function ShopSection() {
               className="flex flex-col gap-1 md:text-right"
             >
               <p style={{ fontFamily: BODY_FONT }} className="text-[#d4c68c]/35 text-xs leading-relaxed max-w-xs">
-                Livraison à Bruxelles & environs · Mar–Sam
+                Levering in Brussel & omgeving · Di–Za
               </p>
               <a
                 href="#contact"
                 style={{ fontFamily: BODY_FONT }}
                 className="flex items-center gap-2 md:justify-end text-[#8a7b34]/60 text-[10px] tracking-[0.3em] uppercase hover:text-[#8a7b34] transition-colors duration-300 group"
               >
-                Commande sur mesure
+                Bestelling op maat
                 <ArrowRight size={12} strokeWidth={1.5} className="group-hover:translate-x-1 transition-transform duration-300" />
               </a>
             </motion.div>
@@ -450,7 +450,7 @@ export function ShopSection() {
             style={{ fontFamily: BODY_FONT }}
             className="text-[#d4c68c]/22 text-[10px] tracking-[0.2em]"
           >
-            Tous les bouquets sont composés à la commande · Fleurs de saison · Belgique
+            Alle boeketten worden op bestelling gemaakt · Seizoensbloemen · België
           </p>
           <a
             href="#contact"
@@ -458,7 +458,7 @@ export function ShopSection() {
             className="flex items-center gap-3 text-[#d4c68c]/35 text-[10px] tracking-[0.3em] uppercase hover:text-[#8a7b34] transition-colors duration-300 group"
           >
             <div className="w-8 h-px bg-[#8a7b34]/40 group-hover:w-12 transition-all duration-400" />
-            Demande personnalisée
+            Persoonlijke aanvraag
           </a>
         </motion.div>
       </div>

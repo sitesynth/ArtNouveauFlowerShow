@@ -4,8 +4,8 @@ import { motion, useScroll } from 'motion/react';
 const DISPLAY_FONT = "'Zaslia', 'Cormorant Garamond', Georgia, serif";
 const BODY_FONT = "'Inter', sans-serif";
 
-const MANIFESTO_LINE1 = 'EVERY ARRANGEMENT IS AN ACT'.split(' ');
-const MANIFESTO_LINE2 = 'OF DEVOTION TO THE FLEETING.'.split(' ');
+const MANIFESTO_LINE1 = 'ELKE SCHIKKING IS EEN DAAD'.split(' ');
+const MANIFESTO_LINE2 = 'VAN TOEWIJDING AAN HET VERGANKELIJKE.'.split(' ');
 const ALL_WORDS = [...MANIFESTO_LINE1, ...MANIFESTO_LINE2];
 
 const BG_IMG = '/BG.png';
@@ -61,7 +61,7 @@ export function ManifestoSection() {
           style={{ fontFamily: BODY_FONT }}
           className="text-[#8a7b34] text-[10px] tracking-[0.45em] uppercase mb-16 md:mb-20"
         >
-          Our Manifesto
+          Ons Manifest
         </motion.p>
 
         {/* Word-by-word reveal */}
